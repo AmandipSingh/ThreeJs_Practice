@@ -3,5 +3,5 @@ services:
     name: your-service-name
     env: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --save three && npm install --save-dev vite && npm install && npm run build
     startCommand: npm run start
