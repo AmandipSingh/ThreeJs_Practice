@@ -8,6 +8,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview"
+    "start": "echo 'Starting Vite preview...' && vite preview"
   }
 }
