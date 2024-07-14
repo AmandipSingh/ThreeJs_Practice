@@ -5,7 +5,11 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 8080, // Ensure a known port number
-    middleware: [middleware], // Use the CORS middleware
+    middlewareMode: true,
+    setupMiddlewares: (middlewares, server) => {
+      middlewares.use(corsMiddleware);
+      return middlewares;
+    },
     headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
